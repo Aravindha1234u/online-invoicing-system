@@ -185,7 +185,7 @@ function item_prices_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1,
 		$dvprint = true;
 	}
 
-	$filterer_item = thisOr($_REQUEST['filterer_item'], '');
+	$filterer_item = thisOr(htmlspecialchars($_REQUEST['filterer_item']), '');
 
 	// populate filterers, starting from children to grand-parents
 

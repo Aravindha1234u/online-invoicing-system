@@ -203,7 +203,7 @@ function invoice_items_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 
 	}
 
 	$filterer_invoice = thisOr($_REQUEST['filterer_invoice'], '');
-	$filterer_item = thisOr($_REQUEST['filterer_item'], '');
+	$filterer_item = thisOr(htmlspecialchars($_REQUEST['filterer_item']), '');
 
 	// populate filterers, starting from children to grand-parents
 
